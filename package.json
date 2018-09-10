@@ -1,0 +1,19 @@
+{
+  "name": "acceptbot",
+  "version": "1.0.0",
+  "description": "A Steam bot that accepts friend requests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Lester",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4",
+    "socket.io": "^2.0.4",
+    "steam-totp": "^2.0.1",
+    "steam-user": "^3.23.2",
+    "steamcommunity": "^3.33.1"
+  }
+}

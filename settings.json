@@ -1,0 +1,11 @@
+{
+    "username": "Username",
+    "password": "Password",
+    "sharedSecret": "",
+    "message": "You have been accepted by an awesome bot!",
+    "autoMessage": "I'm not here at the moment, I'll reply when I can :)",
+    "autoMessageEnabled": false,
+    "game": "AcceptBot",
+    "removeOnAdd": false,
+    "removeAfterTime": 0
+}

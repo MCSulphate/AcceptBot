@@ -1,0 +1,54 @@
+doctype html5
+
+html
+
+    head
+        title AcceptBot Web App
+        link(rel='stylesheet' href='app.css')
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,700')
+    
+    body
+        div.app-container
+            h1 AcceptBot Web App
+            
+            div.controls
+                div.control
+                    span Message:
+                    input#message-input(type='text')
+                    input(type='button' onclick='updateMessage()' value='Update')
+                
+                div.control
+                    span Game:
+                    input#game-input(type='text')
+                    input(type='button' onclick='updateGame()' value='Update')
+                
+                div.control
+                    span Remove On Add?
+                    label.switch
+                        input#time-checkbox(type='checkbox' onclick='updateRemoveOnAdd()')
+                        span.slider
+                
+                    div.slow-opacity#time-control(style='opacity: 0')
+                        span Remove After
+                        input#time-input(type='number')
+                        span Minutes
+                        input(type='button' onclick='updateRemoveAfterTime()' value='Update')
+
+                div.control
+                    span Auto Message?
+                    label.switch
+                        input#auto-message-checkbox(type='checkbox' onclick='updateAutoMessageEnabled()')
+                        span.slider
+
+                    div.slow-opacity#auto-message-control(style='opacity: 0')
+                        span Send Message
+                        input#auto-message-input(type='text')
+                        input(type='button' onclick='updateAutoMessage()' value='Update')
+                    
+                div.control
+                    span Live Feed:
+                    textarea#live-feed(readonly)
+        
+        script(src='socket.io/socket.io.js')
+        script var socket = io();
+        script(src='app.js')

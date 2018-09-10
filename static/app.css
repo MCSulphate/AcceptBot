@@ -1,0 +1,196 @@
+/*
+ Colour Pallete
+ ---------------
+ Black: #262626
+ Dark Grey: #333333
+ Grey: #808080
+ Light Grey: #999999
+ White: rgb(217, 217, 217)
+*/
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    
+    background: #333333 url(background.png) center no-repeat;
+    background-size: cover;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Roboto';
+    color: #262626;
+}
+
+.app-container {
+    height: 70%;
+    width: 60%;
+    display: block;
+    
+    background-color: rgba(217, 217, 217, 0.7);
+    border-radius: 15px;
+    box-shadow: 3px 3px #999;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: underline;
+    text-align: center;
+    
+    margin-bottom: 5px;
+}
+
+.controls {
+    height: 80%;
+    width: calc(100% - 60px);
+    margin: 0 15px 15px 15px;
+    padding: 15px;
+    
+    border: 2px solid #999999;
+    border-radius: 10px;
+}
+
+.control {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+span {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.control > span {
+    width: 200px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.control input[type='text'] {
+    height: 30px;
+    width: 60%;
+    margin: 0 10px;
+    
+    font-size: 20px;
+}
+.control input[type='button'] {
+    height: 30px;
+    width: 15%;
+}
+.control input:focus {
+    outline: 0;
+}
+
+.control textarea {
+    height: 275px;
+    width: calc(75% + 10px);
+    margin-left: 10px;
+    padding: 5px;
+    
+    color: #d9d9d9;
+    background-color: #262626;
+    
+    font-size: 15px;
+    font-weight: 500;
+    font-family: monospace;
+}
+.control textarea:focus {
+    outline: 0;
+}
+
+#time-control, #auto-message-control {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slow-opacity {
+    transition: opacity 0.4s;
+}
+
+#time-control, #auto-message-control > span {
+    margin-left: 10px;
+}
+
+#time-control input[type='number'] {
+    height: 30px;
+    width: 50px;
+    margin-left: 10px;
+}
+
+#auto-message-control input[type='text'] {
+	height: 30px;
+	width: 335px;
+	margin-left: 10px;
+	font-size: 15px;
+}
+
+#time-control input[type='button'], #auto-message-control input[type='button'] {
+    margin-left: 10px;
+    width: 80px;
+}
+
+/* Slider Toggle CSS */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 10px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  width: 60px !important;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #32d335;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider {
+  border-radius: 34px;
+}
+
+.slider:before {
+  border-radius: 50%;
+}
