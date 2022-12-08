@@ -9,7 +9,7 @@
   "author": "Matthew Lester",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "pug": "^2.0.0-rc.4",
     "socket.io": "^2.4.0",
     "steam-totp": "^2.0.1",
